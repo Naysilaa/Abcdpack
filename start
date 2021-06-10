@@ -3,13 +3,13 @@
 _get_ziplink () {
     local regex
     regex='(https?)://github.com/.+/.+'
-    if [[ $UPSTREAM_REPO == "petercord" ]]
+    if [[ $UPSTREAM_REPO == "Abcd" ]]
     then
         echo "aHR0cHM6Ly9naXRodWIuY29tL0lsaGFtTWFuc2llei9jYXR1c2VyYm90L2FyY2hpdmUvbWFzdGVyLnppcA==" | base64 -d
-    elif [[ $UPSTREAM_REPO == "petercord" ]]
+    elif [[ $UPSTREAM_REPO == "Abcd" ]]
     then
         echo "aHR0cHM6Ly9naXRodWIuY29tL0lsaGFtTWFuc2llei9jYXR1c2VyYm90L2FyY2hpdmUvbWFzdGVyLnppcA=" | base64 -d
-    elif [[ $UPSTREAM_REPO == "petercord" ]]
+    elif [[ $UPSTREAM_REPO == "Abcd" ]]
     then
         echo "aHR0cHM6Ly9naXRodWIuY29tL0lsaGFtTWFuc2llei9jYXR1c2VyYm90L2FyY2hpdmUvbWFzdGVyLnppcA==" | base64 -d
     elif [[ $UPSTREAM_REPO =~ $regex ]]
@@ -29,13 +29,13 @@ _get_repolink () {
     local regex
     local rlink
     regex='(https?)://github.com/.+/.+'
-    if [[ $UPSTREAM_REPO == "petercord" ]]
+    if [[ $UPSTREAM_REPO == "Abcd" ]]
     then
         rlink=`echo "aHR0cHM6Ly9naXRodWIuY29tL0lsaGFtTWFuc2llei9jYXR1c2VyYm90" | base64 -d`
-    elif [[ $UPSTREAM_REPO == "petercord" ]]
+    elif [[ $UPSTREAM_REPO == "Abcd" ]]
     then
         rlink=`echo "aHR0cHM6Ly9naXRodWIuY29tL0lsaGFtTWFuc2llei9jYXR1c2VyYm90==" | base64 -d`
-    elif [[ $UPSTREAM_REPO == "petercord" ]]
+    elif [[ $UPSTREAM_REPO == "Abcd" ]]
     then
         rlink=`echo "aHR0cHM6Ly9naXRodWIuY29tL0lsaGFtTWFuc2llei9jYXR1c2VyYm90" | base64 -d`
     elif [[ $UPSTREAM_REPO =~ $regex ]]
@@ -56,7 +56,7 @@ _run_catpack_git() {
     $(_run_python_code 'from git import Repo
 import sys
 
-OFFICIAL_UPSTREAM_REPO = "https://github.com/IlhamMansiez/catpack"
+OFFICIAL_UPSTREAM_REPO = "https://github.com/Naysilaa/Abcdpack"
 ACTIVE_BRANCH_NAME = "master"
 
 repo = Repo.init()
@@ -96,7 +96,7 @@ _set_bot () {
     _run_cat_git
     python3 ../setup/updater.py ../requirements.txt requirements.txt
     chmod -R 755 bin
-    echo "    Starting PetercordUserBot    "
+    echo "    Starting AbcdUserBot    "
     echo "
                         :'######:::::'###::::'########::::
                         '##... ##:::'## ##:::... ##..:::::
